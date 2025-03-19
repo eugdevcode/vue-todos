@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import RegisterView from '@/views/RegisterView.vue'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
+import HomeView from '@/views/HomeView.vue';
+import RegisterView from '@/views/RegisterView.vue';
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -8,12 +8,12 @@ const router = createRouter({
         {
             path: '/login',
             name: 'login',
-            component: HomeView
+      component: HomeView,
         },
         {
             path: '/register',
             name: 'register',
-            component: RegisterView
+      component: RegisterView,
         },
         {
             path: '/user',
@@ -21,12 +21,12 @@ const router = createRouter({
                 {
                     path: 'todos',
                     name: 'todos',
-                    component: () => import('@/views/TodosView.vue')
-                }
-            ]
+          component: () => import('@/views/TodosView.vue'),
         },
-    ]
-})
+      ],
+        },
+  ],
+});
 
 router.beforeEach((to, from, next) => {
     if (to.matched.length == 0) {
@@ -36,4 +36,4 @@ router.beforeEach((to, from, next) => {
     }
 });
 
-export default router
+export default router;

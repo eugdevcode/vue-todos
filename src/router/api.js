@@ -11,13 +11,13 @@ export const hexGetTodo = `${hexApi}/todos`;
 export const hexInsTodo = `${hexApi}/todos`;
 
 export const hexUpdateTodo = (id) => {
-    return `${hexApi}/todos/${id}`
+  return `${hexApi}/todos/${id}`;
 };
 
 export const hexDelTodo = (id) => {
-    return `${hexApi}/todos/${id}`
+  return `${hexApi}/todos/${id}`;
 };
 
 export const hexToggleTodo = (id) => {
-    return `${hexApi}/todos/${id}/toggle`
+  return `${hexApi}/todos/${id}/toggle`;
 };
